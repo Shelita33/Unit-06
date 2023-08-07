@@ -1,0 +1,24 @@
+fun main() {
+
+      val number = 8893
+    
+
+      fun isNumberDivisible(number: Int, divisor: Int) : Boolean {
+          return number % divisor == 0
+      }
+
+      fun isPrime(number: Int): Boolean {
+          val doubleNumber = number.toDouble()
+          println("Range is $number to ${(doubleNumber)}.toInt()")
+          while (true) {
+              if (number <= 0) {
+                  return false
+              }
+              for (x in 2..(doubleNumber).toInt()) {
+                  return !isNumberDivisible(number, x)
+              }
+          }
+      }
+
+      println("Is $number prime? ${isPrime(number)}")
+  }
